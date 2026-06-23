@@ -36,3 +36,9 @@ The audit skill is most effective when run in a **fresh Claude Code session**, s
 ## Sharing mocks
 
 Mocks live on a dedicated branch in the project repo. Sharing is as simple as pointing engineers or stakeholders to that branch and the local dev URL — no separate design tool or export step required. Engineers can read the code directly if they want implementation detail.
+
+## Adapting for other frameworks
+
+The prompts and skills are framework-agnostic — Prompts 1 and 2 discover the component library, router, and app shell from the codebase rather than assuming React. They will work as-is for Angular, Vue, or any other stack.
+
+The one thing that needs a manual review is the `CLAUDE.md` that Prompt 2 generates in the mocks directory. It includes a Visual Fidelity section with concrete patterns derived from the project's component library. After bootstrapping, read through that section and replace any component-library-specific advice (sx prop patterns, MUI variant overrides, etc.) with the equivalent guidance for your stack. The design sensibility principles above that section are framework-agnostic and can stay as-is.
