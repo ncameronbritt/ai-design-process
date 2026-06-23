@@ -1,4 +1,4 @@
-# AI Design Process
+# AI Mockup Process
 
 A workflow for building high-fidelity UX design mockups in a React codebase using Claude Code.
 
